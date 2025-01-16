@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes pulse {
+  0% {
+      opacity:1;
+  }
+  100% {
+      opacity:0;
+      -webkit-transform:scale(1.2)
+  }
+}
+.pulse{
+  -webkit-animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: pulse;
+  -moz-animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-name: pulse;
+  border: 4px solid #30BDFF;
+  border-radius: 50%;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: calc(100% + 0px);
+  height: calc(100% + 0px);
+  z-index: -1;
+}
+
+.second-pulse{
+  -webkit-animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: pulse;
+  -moz-animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-name: pulse;
+  border: 4px solid #30BDFF;
+  border-radius: 50%;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: calc(100% + 0px);
+  height: calc(100% + 0px);
+  z-index: -1;
+  animation-delay: 1.4s;
+}
+
