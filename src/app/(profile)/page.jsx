@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import PortfolioSection from "@/app/components/PortfolioSection";
 import ServicesSection from "@/app/components/ServicesSection";
 
