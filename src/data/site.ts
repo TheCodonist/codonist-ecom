@@ -174,6 +174,7 @@ export const projects: Project[] = [
     status: "Archived",
     quote: "He assisted us in planning the website from a technical point of view, in developing the website, and in testing it prior to deployment.",
     palette: ["#0c1f38", "#c9a24a"],
+    featured: true,
   },
   {
     slug: "atlantesys",
@@ -201,6 +202,7 @@ export const projects: Project[] = [
     tags: ["Vue", "Laravel / PHP"],
     status: "Archived",
     palette: ["#1a0f2e", "#f472b6"],
+    featured: true,
   },
   {
     slug: "banter-room",
@@ -328,7 +330,6 @@ export const projects: Project[] = [
     url: "https://carasti.com/",
     palette: ["#1f0a0a", "#f87171"],
     image: "/work/carasti.jpg",
-    featured: true,
   },
   {
     slug: "caa-financial",
@@ -345,7 +346,6 @@ export const projects: Project[] = [
     url: "https://www.caafinancial.com/",
     palette: ["#0a1a2f", "#38bdf8"],
     image: "/work/caa-financial.jpg",
-    featured: true,
   },
   {
     slug: "evolurise-checkout",
@@ -379,10 +379,9 @@ export const allTags: Tag[] = ["Vue", "React / Next.js", "Laravel / PHP", "Pytho
 
 export const testimonials = [
   { quote: "Collaborating with him was an absolute pleasure. He exhibited a remarkable level of proficiency and expertise.", name: "Ron B.", company: "Imperium Jets" },
-  { quote: "Very professional and result-driven. Understands the challenges and provides solutions before they become issues.", name: "Client", company: "Positivity SRL, Italy" },
   { quote: "Hamayun became a partner for me, he's a very talented developer.", name: "Walid S.", company: "Evolurise" },
   { quote: "Delivered a pixel-perfect HTML version of the user interface… quick, prompt with communication, and also very patient.", name: "Muriuki K.", company: "The Dapper Brother" },
-  { quote: "He is my go-to guy for front end, but very knowledgeable on the backend as well.", name: "Client", company: "CAA Financial" },
+  { quote: "Attentive, professional work. Would hire again!", name: "Stephanie O.", company: "" },
   { quote: "An exceptional professional in the field of development.", name: "Aqib O.", company: "Graphics Panthers" },
 ];
 

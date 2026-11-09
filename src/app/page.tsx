@@ -33,11 +33,11 @@ export default function Home() {
           <div className="grid gap-4 md:grid-cols-3 md:grid-rows-[300px_300px]">
             {featured.slice(0, 4).map((p, i) => (
               <Reveal key={p.slug} delay={i * 80} className={i === 0 ? "md:row-span-2" : ""}>
-                <ProjectCard project={p} large={i === 0} className="h-[320px] md:h-full" />
+                <ProjectCard project={p} large={i === 0} showStatus={false} className="h-[260px] md:h-full" />
               </Reveal>
             ))}
             <Reveal delay={320}>
-              <Link href="/work" className="group flex h-[320px] flex-col justify-between rounded-3xl bg-brand p-7 text-brand-ink md:h-full">
+              <Link href="/work" className="group flex h-[200px] flex-col justify-between rounded-3xl bg-brand p-7 text-brand-ink md:h-full">
                 <span className="font-mono text-[11px] uppercase tracking-[0.2em]">All projects</span>
                 <span>
                   <span className="block font-display text-3xl font-semibold tracking-tight">Explore the full portfolio</span>
@@ -74,17 +74,20 @@ export default function Home() {
       <section className="py-24 md:py-32">
         <div className="container">
           <SectionHeading index="05" eyebrow="Codonist Lab" title="Don’t take our word for it." fade="Try it." text="Working demos of the features clients ask for most. Every one built in-house." />
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
             {labDemos.map((d, i) => (
-              <Reveal key={d.id} delay={(i % 4) * 60}>
-                <Link href={`/lab#${d.id}`} className="card group flex h-full flex-col p-6 transition-all duration-300 hover:-translate-y-1 hover:border-ink/30 hover:shadow-xl">
+              <Reveal key={d.id} delay={(i % 4) * 60} className={i >= 4 ? "hidden lg:block" : ""}>
+                <Link href={`/lab#${d.id}`} className="card group flex h-full flex-col p-4 transition-all sm:p-6 duration-300 hover:-translate-y-1 hover:border-ink/30 hover:shadow-xl">
                   <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted">{d.tag}</span>
-                  <span className="mt-4 font-display text-lg font-semibold tracking-tight">{d.title}</span>
-                  <span className="mt-2 flex-1 text-sm leading-relaxed text-muted">{d.text}</span>
+                  <span className="mt-3 font-display text-base font-semibold leading-tight tracking-tight sm:mt-4 sm:text-lg">{d.title}</span>
+                  <span className="mt-2 flex-1 text-xs leading-relaxed text-muted sm:text-sm">{d.text}</span>
                   <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold">Try it <Arrow className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" /></span>
                 </Link>
               </Reveal>
             ))}
+          </div>
+          <div className="mt-6 flex justify-center lg:hidden">
+            <Link href="/lab" className="btn-ghost">See all {labDemos.length} demos <Arrow className="h-4 w-4" /></Link>
           </div>
         </div>
       </section>

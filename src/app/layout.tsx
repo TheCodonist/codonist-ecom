@@ -37,8 +37,8 @@ export const viewport: Viewport = {
   ],
 };
 
-// Runs before paint so the saved theme never flashes.
-const themeScript = `(function(){try{var t=localStorage.getItem('theme');if(t==='dark'){document.documentElement.classList.add('dark')}}catch(e){}})()`;
+// Runs before paint so the theme never flashes. Uses the saved choice, else the device setting.
+const themeScript = `(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark')}}catch(e){}})()`;
 
 const jsonLd = {
   "@context": "https://schema.org",
