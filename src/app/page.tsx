@@ -2,6 +2,7 @@ import Link from "next/link";
 import Hero from "@/components/home/Hero";
 import ProductShowcase from "@/components/home/ProductShowcase";
 import Founder from "@/components/home/Founder";
+import SitesWall from "@/components/home/SitesWall";
 import SectionHeading from "@/components/SectionHeading";
 import ServicesGrid from "@/components/ServicesGrid";
 import ProjectCard from "@/components/ProjectCard";
@@ -43,6 +44,10 @@ export default function Home() {
               </Link>
             </Reveal>
           </div>
+        </div>
+        <div className="mt-20 md:mt-28">
+          <div className="container"><p className="eyebrow mb-6 text-center">Client websites, live today</p></div>
+          <SitesWall />
         </div>
       </section>
 

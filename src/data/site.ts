@@ -297,7 +297,9 @@ export const projects: Project[] = [
     tools: ["HTML", "CSS", "JavaScript"],
     tags: ["Design to code"],
     status: "Delivered",
+    url: "https://codonist.bitbucket.io/demo/elevatesecurity/",
     palette: ["#0b1530", "#818cf8"],
+    image: "/work/elevate-security.jpg",
   },
   {
     slug: "financial-data",
@@ -324,7 +326,9 @@ export const projects: Project[] = [
     tags: ["WordPress", "Design to code"],
     status: "Archived",
     quote: "Hamayun was absolutely perfect, great communication & went above and beyond to ensure the project was completed on time.",
+    url: "https://carasti.com/",
     palette: ["#1f0a0a", "#f87171"],
+    image: "/work/carasti.jpg",
   },
   {
     slug: "caa-financial",
@@ -338,7 +342,9 @@ export const projects: Project[] = [
     tags: ["Design to code"],
     status: "Archived",
     quote: "He is my go-to guy for front end, but very knowledgeable on the backend as well.",
+    url: "https://www.caafinancial.com/",
     palette: ["#0a1a2f", "#38bdf8"],
+    image: "/work/caa-financial.jpg",
   },
   {
     slug: "evolurise-checkout",
@@ -403,3 +409,58 @@ export const skillGroups = [
 ];
 
 export const techMarquee = ["Laravel", "Vue.js", "React", "Next.js", "Python", "Django", "Flask", "WordPress", "WooCommerce", "Shopify", "Tailwind CSS", "TypeScript", "MySQL", "Capacitor", "Figma"];
+
+/* ------------------------------------------------------------------ */
+/* Client websites gallery (screenshots in /public/work)               */
+/* ------------------------------------------------------------------ */
+
+export type SiteCategory = "Healthcare" | "Business & finance" | "E-commerce" | "Nonprofit & policy" | "Tech & SaaS";
+
+export type ClientSite = {
+  name: string;
+  about: string;
+  category: SiteCategory;
+  country: string;
+  url: string;
+  image: string;
+  /** Front-end build hosted on Codonist's own demo server. */
+  demo?: boolean;
+};
+
+export const siteCategories: SiteCategory[] = ["Healthcare", "Business & finance", "E-commerce", "Nonprofit & policy", "Tech & SaaS"];
+
+export const clientSites: ClientSite[] = [
+  { name: "Rapid Med Urgent Care", about: "Urgent care clinics in Argyle and Highland Village, Texas.", category: "Healthcare", country: "USA", url: "https://rapidmed.com/", image: "/work/rapidmed-com.jpg" },
+  { name: "Augusto Digital", about: "AI activation consultancy for mid-size organizations.", category: "Tech & SaaS", country: "USA", url: "https://augusto.digital/", image: "/work/augusto-digital.jpg" },
+  { name: "Hello Laundry", about: "Laundry and dry-cleaning pickup service with online booking.", category: "Business & finance", country: "UK", url: "https://hellolaundry.co.uk/", image: "/work/hellolaundry-co-uk.jpg" },
+  { name: "Graina", about: "Bulk and organic food online store.", category: "E-commerce", country: "Australia", url: "https://graina.com.au/", image: "/work/graina-com-au.jpg" },
+  { name: "Party Rental Studio", about: "Software for party and event rental businesses.", category: "Tech & SaaS", country: "USA", url: "https://partyrentalstudio.com/", image: "/work/partyrentalstudio-com.jpg" },
+  { name: "Danimer Scientific", about: "Biodegradable materials company.", category: "Business & finance", country: "USA", url: "https://danimerscientific.com/", image: "/work/danimerscientific-com.jpg" },
+  { name: "ConcertoCare", about: "Home-based healthcare services.", category: "Healthcare", country: "USA", url: "https://concertocare.com/", image: "/work/concertocare-com.jpg" },
+  { name: "Go Fitness", about: "Activewear online store.", category: "E-commerce", country: "Brazil", url: "https://gofitness.club/", image: "/work/gofitness-club.jpg" },
+  { name: "ALEC", about: "American Legislative Exchange Council, policy organization.", category: "Nonprofit & policy", country: "USA", url: "https://www.alec.org/", image: "/work/alec-org.jpg" },
+  { name: "Atomicorp", about: "Workload security platform built on OSSEC.", category: "Tech & SaaS", country: "USA", url: "https://atomicorp.com/", image: "/work/atomicorp-com.jpg" },
+  { name: "Modern Trust", about: "Online living trust and estate planning.", category: "Business & finance", country: "USA", url: "https://moderntrust.com/", image: "/work/moderntrust-com.jpg" },
+  { name: "Shimlee", about: "Custom photo prints on wood, online store.", category: "E-commerce", country: "USA", url: "https://www.shimlee.com/", image: "/work/shimlee-com.jpg" },
+  { name: "Cherry Blossom PACE", about: "All-inclusive care program for the elderly.", category: "Healthcare", country: "USA", url: "https://cherryblossompace.com/", image: "/work/cherryblossompace-com.jpg" },
+  { name: "The Hub", about: "Creator marketplace for UGC photo and video content (Webflow).", category: "Tech & SaaS", country: "USA", url: "https://marketplace-002-6492289f70179456e1dfdc4.webflow.io/", image: "/work/the-hub.jpg" },
+  { name: "Closehaul Capital", about: "Finance and investment firm.", category: "Business & finance", country: "USA", url: "https://closehaulcapital.com/", image: "/work/closehaulcapital-com.jpg" },
+  { name: "Resilient Ventures", about: "Venture capital access for African American founders.", category: "Nonprofit & policy", country: "USA", url: "https://resilientventures.org/", image: "/work/resilientventures-org.jpg" },
+  { name: "PeopleSpace", about: "Workplace interiors and furniture company.", category: "Business & finance", country: "USA", url: "https://www.peoplespace.com/", image: "/work/peoplespace-com.jpg" },
+  { name: "The Yoga Tree", about: "Online yoga community and class library.", category: "Healthcare", country: "Ireland", url: "https://theyogatree.ie/", image: "/work/theyogatree-ie.jpg" },
+  { name: "Australian Opal Association", about: "Industry association site with a member directory.", category: "Nonprofit & policy", country: "Australia", url: "https://www.opal.asn.au/", image: "/work/opal-asn-au.jpg" },
+  { name: "Word & Brown Companies", about: "Health insurance company corporate site.", category: "Business & finance", country: "USA", url: "https://www.wbcompanies.com/", image: "/work/wbcompanies-com.jpg" },
+  { name: "Greensky Games", about: "Indie VR game studio.", category: "Tech & SaaS", country: "USA", url: "https://www.greensky.games/", image: "/work/greensky-games.jpg" },
+  { name: "The Circle", about: "EU program for entrepreneurs in Italy, Spain and Romania.", category: "Nonprofit & policy", country: "EU", url: "https://jointhecircle.eu/", image: "/work/jointhecircle-eu.jpg" },
+  { name: "Women's Wellness Institute", about: "Women's health clinic in Dallas.", category: "Healthcare", country: "USA", url: "https://womenswellnessinstitute.com/", image: "/work/womenswellnessinstitute-com.jpg" },
+  { name: "Absolum", about: "Managed IT services company.", category: "Tech & SaaS", country: "Netherlands", url: "https://absolum.nl/", image: "/work/absolum-nl.jpg" },
+  { name: "Valteo Tech", about: "IT and operations services for political-reform nonprofits.", category: "Tech & SaaS", country: "USA", url: "https://www.valteotech.com/", image: "/work/valteotech-com.jpg" },
+  { name: "Wise Up", about: "Health information site with a statistics dashboard.", category: "Healthcare", country: "UK", url: "https://wiseupni.com/", image: "/work/wiseupni-com.jpg" },
+  { name: "Algoos Consulting", about: "Hotel consulting firm with a filterable team page.", category: "Business & finance", country: "USA", url: "https://www.algoosconsulting.com/our-team-filter/", image: "/work/algoosconsulting-com.jpg" },
+  { name: "David Chow Foundation", about: "Humanitarian award foundation.", category: "Nonprofit & policy", country: "USA", url: "https://davidchowfoundation.org/", image: "/work/davidchowfoundation-org.jpg" },
+  { name: "Qatar National Day", about: "Content site about Qatar National Day.", category: "Nonprofit & policy", country: "Qatar", url: "https://qatarnationalday.net/", image: "/work/qatarnationalday-net.jpg" },
+  { name: "Builders Risk", about: "Insurance quote form, front-end build.", category: "Business & finance", country: "USA", url: "https://codonist.bitbucket.io/demo/builder-risk-v1-ui/", image: "/work/demo-builder-risk-v1-ui.jpg", demo: true },
+  { name: "Drafteam", about: "Sports ticket and membership app UI, front-end build.", category: "Tech & SaaS", country: "Portugal", url: "https://codonist.bitbucket.io/demo/drafteam/", image: "/work/demo-drafteam.jpg", demo: true },
+  { name: "Virginia Democrats", about: "Campaign homepage, front-end build.", category: "Nonprofit & policy", country: "USA", url: "https://codonist.bitbucket.io/demo/vadems/", image: "/work/demo-vadems.jpg", demo: true },
+  { name: "Too Good", about: "Youth prevention education program, front-end build.", category: "Nonprofit & policy", country: "USA", url: "https://codonist.bitbucket.io/demo/toogood/", image: "/work/demo-toogood.jpg", demo: true },
+];
