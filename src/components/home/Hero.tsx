@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Arrow } from "../icons";
-import { techMarquee } from "@/data/site";
+import { site, techMarquee } from "@/data/site";
 
 export default function Hero() {
   return (
@@ -36,6 +36,12 @@ export default function Hero() {
             </Link>
             <Link href="/work" className="btn-ghost !px-7 !py-4 text-[15px]">See our work</Link>
           </div>
+          <p className="mt-5 animate-rise text-sm text-muted [animation-delay:300ms]">
+            Or reach us on{" "}
+            <a href={site.whatsapp} target="_blank" rel="noopener" className="font-semibold text-ink underline decoration-brand decoration-2 underline-offset-4">WhatsApp</a>{" "}
+            or hire us on{" "}
+            <a href={site.links.upwork} target="_blank" rel="noopener" className="font-semibold text-ink underline decoration-brand decoration-2 underline-offset-4">Upwork</a>.
+          </p>
 
           {/* Portrait card (mobile) */}
           <div className="portrait relative mt-12 aspect-[4/5] overflow-hidden rounded-3xl lg:hidden">
