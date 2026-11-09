@@ -12,7 +12,7 @@ export default {
         ink: "rgb(var(--ink) / <alpha-value>)",
         muted: "rgb(var(--muted) / <alpha-value>)",
         line: "rgb(var(--line) / <alpha-value>)",
-        brand: { DEFAULT: "#FFE100", ink: "#111111", deep: "#B39E00" },
+        brand: { DEFAULT: "#FFE100", ink: "#111111", deep: "#B39E00", text: "#7A6A00" },
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],

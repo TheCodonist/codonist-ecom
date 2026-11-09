@@ -56,14 +56,17 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col justify-between gap-2 border-t border-white/10 py-6 text-xs text-white/40 sm:flex-row">
+        <div className="flex flex-col justify-between gap-2 border-t border-white/10 py-6 text-xs text-white/60 sm:flex-row">
           <p>© {year} Codonist. All rights reserved.</p>
           <p>Designed &amp; engineered in-house.</p>
         </div>
       </div>
-      <div aria-hidden className="pointer-events-none select-none whitespace-nowrap px-4 pb-2 text-center font-display text-[17.5vw] font-bold leading-[0.78] tracking-tightest text-white/[0.04]">
-        <span className="text-brand/[0.12]">{"{"}</span>Codonist<span className="text-brand/[0.12]">{"}"}</span>
-      </div>
+      {/* Decorative wordmark as SVG so contrast checkers don't treat it as body text. */}
+      <svg aria-hidden viewBox="0 0 1000 175" className="pointer-events-none block w-full select-none px-4 pb-2">
+        <text x="500" y="150" textAnchor="middle" textLength="980" lengthAdjust="spacingAndGlyphs" className="font-display" fontSize="200" fontWeight="700" fill="rgb(255 255 255 / 0.04)">
+          <tspan fill="rgb(255 225 0 / 0.12)">{"{"}</tspan>Codonist<tspan fill="rgb(255 225 0 / 0.12)">{"}"}</tspan>
+        </text>
+      </svg>
     </footer>
   );
 }

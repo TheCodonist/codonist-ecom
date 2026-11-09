@@ -18,7 +18,7 @@ export default function ServicesGrid() {
             <h3 className="mt-4 font-display text-base font-semibold leading-tight tracking-tight sm:mt-8 sm:text-xl">{s.title}</h3>
             <p className="mt-2 hidden flex-1 text-sm leading-relaxed text-muted sm:block">{s.short}</p>
             <div className="mt-6 hidden items-center justify-between sm:flex">
-              <span className="font-mono text-[10px] uppercase tracking-wider text-muted/80">{s.stack.slice(0, 3).join(" · ")}</span>
+              <span className="font-mono text-[10px] uppercase tracking-wider text-muted">{s.stack.slice(0, 3).join(" · ")}</span>
               <Arrow className="h-4 w-4 -translate-x-2 text-muted opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100" />
             </div>
           </Link>

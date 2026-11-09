@@ -23,12 +23,12 @@ export default function Hero() {
             <span className="mr-2 inline-block h-1.5 w-1.5 -translate-y-px rounded-full bg-emerald-500 align-middle" />
             Software studio · Since 2015
           </p>
-          <h1 className="mt-6 animate-rise font-display text-[44px] font-light leading-[0.98] tracking-tightest text-ink [animation-delay:80ms] sm:text-6xl md:text-7xl xl:text-[88px]">
+          <h1 className="mt-6 font-display text-[44px] font-light leading-[0.98] tracking-tightest text-ink sm:text-6xl md:text-7xl xl:text-[88px]">
             Code with <span className="font-semibold">craft.</span>
             <br />
             Products with <span className="relative font-semibold">purpose<span className="text-brand-deep dark:text-brand">.</span></span>
           </h1>
-          <p className="mt-7 max-w-xl animate-rise text-lg leading-relaxed text-muted [animation-delay:160ms] md:text-xl">
+          <p className="mt-7 max-w-xl text-lg leading-relaxed text-muted md:text-xl">
             Codonist designs and builds web apps, mobile apps, websites and online stores, with Python &amp; AI where it counts. One studio for the whole stack, led by Hamayun Aziz.
           </p>
           <div className="mt-10 flex animate-rise flex-wrap gap-3 [animation-delay:240ms]">
@@ -46,7 +46,7 @@ export default function Hero() {
 
           {/* Portrait card (mobile) */}
           <div className="portrait relative mt-12 aspect-[4/5] overflow-hidden rounded-3xl lg:hidden">
-            <Image src="/images/hamayun-aziz.jpg" alt="Hamayun Aziz, founder of Codonist" fill sizes="100vw" className="object-cover object-top" />
+            <Image src="/images/hamayun-aziz.jpg" alt="Hamayun Aziz, founder of Codonist" fill priority sizes="(min-width:640px) 640px, 100vw" className="object-cover object-top" />
             <div className="tint absolute inset-0 bg-brand mix-blend-multiply" />
           </div>
 
@@ -75,7 +75,7 @@ export default function Hero() {
         <div className="flex overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_10%,black_90%,transparent)]">
           <div className="flex shrink-0 animate-marquee gap-14 pr-14">
             {[...techMarquee, ...techMarquee].map((t, i) => (
-              <span key={i} className="flex items-center gap-14 whitespace-nowrap font-display text-lg font-semibold text-muted/70">
+              <span key={i} className="flex items-center gap-14 whitespace-nowrap font-display text-lg font-semibold text-muted">
                 {t} <span className="text-brand-deep dark:text-brand">{"{ }"}</span>
               </span>
             ))}

@@ -7,7 +7,6 @@ export default function ProjectCard({ project, large = false, className = "", sh
   return (
     <Link
       href={`/work/${project.slug}`}
-      aria-label={`${project.name}: view project`}
       className={`group relative flex min-h-[280px] flex-col justify-end overflow-hidden rounded-3xl text-white ${className}`}
     >
       <ProjectVisual project={project} large={large} />

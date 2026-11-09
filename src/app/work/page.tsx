@@ -5,6 +5,7 @@ import SectionHeading from "@/components/SectionHeading";
 import ClientSites from "@/components/ClientSites";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/work" },
   title: "Work",
   description: "Selected web apps, websites, WordPress and WooCommerce stores and front-end builds by Codonist for clients in the USA, UK, Europe, Australia and the Middle East.",
 };

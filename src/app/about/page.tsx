@@ -7,6 +7,7 @@ import { Arrow, ArrowUpRight } from "@/components/icons";
 import { site, skillGroups, timeline } from "@/data/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/about" },
   title: "About",
   description: "Codonist is a software studio founded by Hamayun Aziz, a full stack developer with 10+ years of experience in Laravel, Vue.js, Python, WordPress and mobile apps.",
 };

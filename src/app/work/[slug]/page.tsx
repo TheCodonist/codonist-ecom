@@ -20,6 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   return {
     title: `${p.name}: ${p.summary}`,
     description: `${p.built} Built by Codonist with ${p.tools.join(", ")}.`,
+    alternates: { canonical: `/work/${p.slug}` },
     openGraph: p.image ? { images: [p.image] } : undefined,
   };
 }
