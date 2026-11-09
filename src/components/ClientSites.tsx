@@ -50,7 +50,7 @@ export default function ClientSites({ limit }: { limit?: number }) {
                 <div className="min-w-0">
                   <h3 className="font-display text-base font-semibold text-ink">{s.name}</h3>
                   <p className="mt-1 text-sm leading-relaxed text-muted">{s.about}</p>
-                  <p className="mt-3 font-mono text-[11px] uppercase tracking-wider text-muted/80">{s.category} · {s.country}</p>
+                  <p className="mt-3 font-mono text-[11px] uppercase tracking-wider text-muted">{s.category} · {s.country}</p>
                 </div>
                 <span className="mt-0.5 grid h-9 w-9 shrink-0 place-items-center rounded-full border border-line text-muted transition group-hover:border-brand group-hover:bg-brand group-hover:text-brand-ink" aria-hidden>
                   <ArrowUpRight className="h-4 w-4" />
