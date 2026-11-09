@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Arrow } from "../icons";
+import Flag from "../Flag";
 import { site, techMarquee } from "@/data/site";
 
 export default function Hero() {
@@ -10,8 +11,8 @@ export default function Hero() {
       <div className="portrait absolute inset-y-0 right-0 hidden w-[52%] lg:block" aria-hidden>
         <Image src="/images/hamayun-aziz.jpg" alt="" fill priority sizes="52vw" className="object-cover object-[50%_20%]" />
         <div className="tint absolute inset-0 bg-brand mix-blend-multiply" />
-        <div className="absolute inset-0 bg-gradient-to-r from-bg via-bg/30 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-bg to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-bg via-transparent via-25% to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-bg to-transparent" />
       </div>
 
       <div className="grid-paper pointer-events-none absolute inset-0 [mask-image:linear-gradient(90deg,black_30%,transparent_60%)]" aria-hidden />
@@ -52,7 +53,7 @@ export default function Hero() {
           <div className="mt-14 flex animate-rise items-center gap-4 [animation-delay:320ms]">
             <div className="flex -space-x-2">
               {["US", "UK", "CA", "DE", "AE"].map((c) => (
-                <span key={c} className="grid h-8 w-8 place-items-center rounded-full border-2 border-bg bg-raised text-[10px] font-bold text-muted">{c}</span>
+                <span key={c} className="grid h-8 w-8 place-items-center overflow-hidden rounded-full border-2 border-bg bg-raised"><Flag code={c} className="h-8 w-12 max-w-none" /></span>
               ))}
             </div>
             <p className="text-sm text-muted">Trusted by clients in the USA, UK, Europe &amp; the Middle East</p>
