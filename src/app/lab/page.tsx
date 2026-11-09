@@ -7,6 +7,7 @@ import { labDemos } from "@/data/lab";
 import { Arrow } from "@/components/icons";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/lab" },
   title: "Lab: live demos",
   description: "Try working demos of the features clients ask for most: filters, data tables, booking calendars, carts, multi-step forms, AI chat, UI components and RTL.",
 };

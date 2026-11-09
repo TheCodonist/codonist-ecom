@@ -47,7 +47,7 @@
     @apply font-mono text-[11px] uppercase tracking-[0.22em] text-muted;
   }
   .eyebrow-brand {
-    @apply font-mono text-[11px] uppercase tracking-[0.22em] text-brand-deep dark:text-brand;
+    @apply font-mono text-[11px] uppercase tracking-[0.22em] text-brand-text dark:text-brand;
   }
   .h-display {
     @apply font-display font-semibold tracking-tightest text-ink;

@@ -10,6 +10,7 @@ import { Arrow, Check, ServiceIcon } from "@/components/icons";
 import { projects, services, type Tag } from "@/data/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services" },
   title: "Services",
   description: "Web applications, mobile apps, websites, WordPress & WooCommerce, Shopify & e-commerce, Python & AI, design to code and ongoing maintenance.",
 };

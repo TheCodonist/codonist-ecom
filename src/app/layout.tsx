@@ -16,6 +16,7 @@ export const metadata: Metadata = {
     template: "%s | Codonist",
   },
   description: site.description,
+  alternates: { canonical: "/" },
   keywords: ["Laravel developer", "Vue.js developer", "full stack developer", "WordPress developer", "WooCommerce", "Shopify", "Python Django developer", "mobile app developer", "Codonist", "Hamayun Aziz"],
   authors: [{ name: site.founder, url: site.url }],
   openGraph: {

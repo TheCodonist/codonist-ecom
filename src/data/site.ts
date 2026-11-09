@@ -4,7 +4,7 @@ export const site = {
   founder: "Hamayun Aziz",
   tagline: "Software studio for web, mobile and AI products",
   description:
-    "Codonist is a software studio led by Hamayun Aziz. We design, build and maintain web applications, mobile apps, websites, WordPress, WooCommerce and Shopify stores, and Python & AI tools for businesses worldwide.",
+    "Codonist is a software studio led by Hamayun Aziz. We build web and mobile apps, websites, online stores and Python & AI tools for businesses worldwide.",
   email: "hamayunaziz@codonist.com",
   whatsapp: "https://wa.me/923433443837",
   phone: "+92 343 3443837",

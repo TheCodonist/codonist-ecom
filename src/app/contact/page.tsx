@@ -5,6 +5,7 @@ import { ArrowUpRight, Chat, Mail } from "@/components/icons";
 import { site } from "@/data/site";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contact" },
   title: "Contact",
   description: "Start a project with Codonist. Email, WhatsApp, Upwork or the enquiry form. We reply within one business day.",
 };
