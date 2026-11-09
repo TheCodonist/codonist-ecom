@@ -3,6 +3,8 @@ import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
 import Reveal from "@/components/Reveal";
 import Process from "@/components/Process";
+import ProjectTypes from "@/components/ProjectTypes";
+import BetterThanAI from "@/components/BetterThanAI";
 import SectionHeading from "@/components/SectionHeading";
 import { Arrow, Check, ServiceIcon } from "@/components/icons";
 import { projects, services, type Tag } from "@/data/site";
@@ -56,9 +58,11 @@ export default function ServicesPage() {
                       <p className="eyebrow">Related work</p>
                       <ul className="mt-5 flex-1 space-y-3">
                         {examples.map((p) => (
-                          <li key={p.slug} className="flex items-center justify-between gap-3 border-b border-line pb-3 text-sm last:border-0">
-                            <span><b>{p.name}</b><span className="block text-xs text-muted">{p.summary}</span></span>
-                            <span className="h-2.5 w-2.5 shrink-0 rounded-full" style={{ background: p.palette[1] }} />
+                          <li key={p.slug} className="border-b border-line pb-3 text-sm last:border-0">
+                            <Link href={`/work/${p.slug}`} className="group flex items-center justify-between gap-3">
+                              <span><b className="group-hover:underline">{p.name}</b><span className="block text-xs text-muted">{p.summary}</span></span>
+                              <Arrow className="h-3.5 w-3.5 shrink-0 text-muted transition-transform group-hover:translate-x-1 group-hover:text-ink" />
+                            </Link>
                           </li>
                         ))}
                         {!examples.length && <li className="text-sm text-muted">Case studies coming soon.</li>}
@@ -71,6 +75,15 @@ export default function ServicesPage() {
             );
           })}
         </div>
+      </section>
+      <section className="border-t border-line py-24">
+        <div className="container">
+          <SectionHeading eyebrow="Projects we take on" title="From a one-day fix" fade="to a full platform." text="New builds, rescues and ongoing care. Pick the way of working that suits you." />
+          <ProjectTypes />
+        </div>
+      </section>
+      <section className="pb-24">
+        <div className="container"><BetterThanAI /></div>
       </section>
       <section className="border-t border-line bg-surface/50 py-24">
         <div className="container">

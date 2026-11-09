@@ -7,6 +7,8 @@ import SectionHeading from "@/components/SectionHeading";
 import ServicesGrid from "@/components/ServicesGrid";
 import ProjectCard from "@/components/ProjectCard";
 import Process from "@/components/Process";
+import ProjectTypes from "@/components/ProjectTypes";
+import BetterThanAI from "@/components/BetterThanAI";
 import Reveal from "@/components/Reveal";
 import { Arrow } from "@/components/icons";
 import { projects } from "@/data/site";
@@ -60,7 +62,18 @@ export default function Home() {
 
       <section className="py-24 md:py-32">
         <div className="container">
-          <SectionHeading index="04" eyebrow="Codonist Lab" title="Don’t take our word for it." fade="Try it." text="Working demos of the features clients ask for most. Every one built in-house." />
+          <SectionHeading index="04" eyebrow="Projects we take on" title="From a one-day fix" fade="to a full platform." text="If it runs on the web or a phone, we can build it, fix it or make it better. Here’s what clients bring us most." />
+          <ProjectTypes />
+        </div>
+      </section>
+
+      <section className="pb-24 md:pb-32">
+        <div className="container"><BetterThanAI /></div>
+      </section>
+
+      <section className="py-24 md:py-32">
+        <div className="container">
+          <SectionHeading index="05" eyebrow="Codonist Lab" title="Don’t take our word for it." fade="Try it." text="Working demos of the features clients ask for most. Every one built in-house." />
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {labDemos.map((d, i) => (
               <Reveal key={d.id} delay={(i % 4) * 60}>
@@ -82,7 +95,7 @@ export default function Home() {
 
       <section className="pb-28 md:pb-36">
         <div className="container">
-          <SectionHeading index="05" eyebrow="Process" title="How we" fade="work." text="Simple, transparent and milestone-based. You always know what’s happening and what’s next." />
+          <SectionHeading index="06" eyebrow="Process" title="How we" fade="work." text="Simple, transparent and milestone-based. You always know what’s happening and what’s next." />
           <Process />
         </div>
       </section>

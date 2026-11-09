@@ -1,26 +1,37 @@
 import Image from "next/image";
 import type { Project } from "@/data/site";
+import ProjectMockup, { hasMockup } from "./ProjectMockup";
 
-/** Real screenshot when available, otherwise a branded browser-style preview. */
+/** Real screenshot when available, otherwise a branded typographic cover. */
 export default function ProjectVisual({ project, large = false }: { project: Project; large?: boolean }) {
   const [bg, accent] = project.palette;
   if (project.image)
-    return <Image src={project.image} alt={`${project.name} screenshot`} fill sizes="(min-width:1024px) 50vw, 100vw" className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]" />;
+    return <Image src={project.image} alt={`${project.name} website screenshot`} fill sizes="(min-width:1024px) 60vw, 100vw" className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]" />;
+  if (hasMockup(project.slug))
+    return (
+      <div className="absolute inset-0 overflow-hidden" style={{ background: `radial-gradient(100% 90% at 80% 0%, ${accent}55, transparent 60%), linear-gradient(160deg, ${bg}, #0a0a0b)` }}>
+        <ProjectMockup project={project} />
+      </div>
+    );
   return (
-    <div className="absolute inset-0 overflow-hidden" style={{ background: `radial-gradient(120% 90% at 100% 0%, ${accent}33, transparent 55%), linear-gradient(160deg, ${bg}, #050505)` }}>
-      <div className={`absolute rounded-xl border border-white/15 bg-white/[0.06] shadow-2xl backdrop-blur-sm transition-transform duration-700 group-hover:-translate-y-1.5 ${large ? "inset-x-10 bottom-0 top-20" : "inset-x-6 bottom-0 top-14"}`}>
-        <div className="flex items-center gap-1.5 border-b border-white/10 px-3 py-2">
-          <i className="h-2 w-2 rounded-full bg-white/25" /><i className="h-2 w-2 rounded-full bg-white/25" /><i className="h-2 w-2 rounded-full bg-white/25" />
-        </div>
-        <div className="p-4">
-          <div className="h-2.5 w-1/4 rounded-full" style={{ background: accent }} />
-          <div className={`mt-4 rounded-full bg-white/80 ${large ? "h-5 w-1/2" : "h-3.5 w-1/2"}`} />
-          <div className="mt-3 h-2 w-2/3 rounded-full bg-white/15" />
-          <div className="mt-1.5 h-2 w-1/2 rounded-full bg-white/10" />
-          <div className="mt-5 grid grid-cols-3 gap-2">
-            {[0, 1, 2].map((i) => <div key={i} className={`${large ? "h-20" : "h-10"} rounded-lg bg-white/[0.07]`} />)}
-          </div>
-        </div>
+    <div
+      aria-hidden
+      className="absolute inset-0 overflow-hidden"
+      style={{ background: `radial-gradient(90% 80% at 85% 10%, ${accent}40, transparent 60%), linear-gradient(160deg, ${bg}, #050505)` }}
+    >
+      <div className="absolute inset-0 opacity-[0.07]" style={{ backgroundImage: "linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)", backgroundSize: "36px 36px" }} />
+      <span
+        className={`absolute right-6 top-1/2 -translate-y-[60%] select-none font-display font-semibold leading-none tracking-tighter transition-transform duration-700 group-hover:-translate-x-2 ${large ? "text-[150px] md:text-[220px]" : "text-[120px]"}`}
+        style={{ color: accent, opacity: 0.9 }}
+      >
+        {"{"}
+        <span className="text-white/90">{project.name.charAt(0)}</span>
+        {"}"}
+      </span>
+      <div className={`absolute left-6 flex flex-wrap gap-1.5 ${large ? "top-20" : "top-16"} max-w-[60%]`}>
+        {project.tools.slice(0, large ? 5 : 3).map((t) => (
+          <span key={t} className="rounded-md border border-white/15 bg-white/5 px-2 py-0.5 font-mono text-[10px] text-white/70">{t}</span>
+        ))}
       </div>
     </div>
   );
