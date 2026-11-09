@@ -158,6 +158,7 @@ export const projects: Project[] = [
     status: "Live",
     url: "https://joinathleteiq.com/",
     featured: true,
+    image: "/work/athlete-iq.jpg",
     palette: ["#06121f", "#22d3ee"],
   },
   {
@@ -172,7 +173,6 @@ export const projects: Project[] = [
     tags: ["Vue", "Design to code"],
     status: "Archived",
     quote: "He assisted us in planning the website from a technical point of view, in developing the website, and in testing it prior to deployment.",
-    featured: true,
     palette: ["#0c1f38", "#c9a24a"],
   },
   {
@@ -187,7 +187,6 @@ export const projects: Project[] = [
     tags: ["Vue"],
     status: "Archived",
     quote: "Excellent, high-quality work.",
-    featured: true,
     palette: ["#18153d", "#a78bfa"],
   },
   {
@@ -201,7 +200,6 @@ export const projects: Project[] = [
     tools: ["Vue", "JavaScript", "PHP API", "CSS"],
     tags: ["Vue", "Laravel / PHP"],
     status: "Archived",
-    featured: true,
     palette: ["#1a0f2e", "#f472b6"],
   },
   {
@@ -244,6 +242,8 @@ export const projects: Project[] = [
     status: "Live",
     url: "https://socalpremiumhealthcare.com",
     palette: ["#0b2233", "#60a5fa"],
+    image: "/work/socal-premium-healthcare.jpg",
+    featured: true,
   },
   {
     slug: "belfast-eye",
@@ -329,6 +329,7 @@ export const projects: Project[] = [
     url: "https://carasti.com/",
     palette: ["#1f0a0a", "#f87171"],
     image: "/work/carasti.jpg",
+    featured: true,
   },
   {
     slug: "caa-financial",
@@ -345,6 +346,7 @@ export const projects: Project[] = [
     url: "https://www.caafinancial.com/",
     palette: ["#0a1a2f", "#38bdf8"],
     image: "/work/caa-financial.jpg",
+    featured: true,
   },
   {
     slug: "evolurise-checkout",

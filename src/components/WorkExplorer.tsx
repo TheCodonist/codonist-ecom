@@ -21,7 +21,7 @@ export default function WorkExplorer({ limit, compact = false }: { limit?: numbe
     );
     if (sort === "az") r = [...r].sort((a, b) => a.name.localeCompare(b.name));
     if (sort === "live") r = [...r].sort((a, b) => Number(b.status === "Live") - Number(a.status === "Live"));
-    if (sort === "featured") r = [...r].sort((a, b) => Number(!!b.featured) - Number(!!a.featured));
+    if (sort === "featured") r = [...r].sort((a, b) => Number(!!b.featured) - Number(!!a.featured) || Number(!!b.image) - Number(!!a.image));
     return limit ? r.slice(0, limit) : r;
   }, [tag, q, sort, limit]);
 
